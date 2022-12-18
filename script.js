@@ -28,7 +28,7 @@ do {tlength = window.prompt ("How many characters should be in your Password(Min
     allchar = [...allchar,...spchar];
   }
   if (!lowerConfirm && !upperConfirm && !numberConfirm && !specialConfirm) {
-    window.alert ("then think of one yourself!")
+    window.alert ("Then think of one yourself!")
     return
   }
 let password = ""
@@ -43,4 +43,7 @@ generateBtn.addEventListener("click", writePassword);
 
 /*Tutor Questions
 The starter code has var password = generatePassword();---- What does that mean?
+How to add a MIT license after the fact
+can we review the part where the pw is generated?  this is very confusing to me
+
 */
