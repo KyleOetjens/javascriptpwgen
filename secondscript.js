@@ -99,7 +99,7 @@ let galaxy =[]
 
 
 
-/*
+
 function boil (){
   let length = window.prompt ("How many characters should be in your Password(Min-8 Max-128)")
 

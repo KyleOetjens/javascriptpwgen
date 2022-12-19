@@ -11,30 +11,41 @@ let lowchar =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q
 let highchar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let spchar = [`!`,`@`,`#`,`$`,`%`,`^`,`&`,`*`];
 let numchar= [0,1,2,3,4,5,6,7,8,9,]
+
+function getRandomPw (arr) {
+  arr[Math.floor(Math.random() * arr.length)];
+}
   
 function writePassword() {
-do {tlength = window.prompt ("How many characters should be in your Password(Min-8 Max-128)")} while(tlength < 8 || tlength > 128);
-
+do
+{tlength = window.prompt ("How many characters should be in your Password(Min-8 Max-128, must be a numeric value)")
+console.log(tlength);}
+while (tlength < 8 || tlength > 128 || isNaN(tlength));
+let password = ""
+console.log("step 1")
   if (lowerConfirm = window.confirm("would you like lowercase characters")){
     allchar = [...allchar,...lowchar];
+    password += getRandomPw(lowchar)
   }
   if (upperConfirm = window.confirm("would you like uppercase characters?")){
     allchar = [...allchar,...highchar];
+    password += getRandomPw(highchar)
   }
   if (numberConfirm = window.confirm("would you like numbers?")){
     allchar = [...allchar,...numchar];
+    password += getRandomPw(numchar)
   }
   if (specialConfirm = window.confirm("would you like special characters")){
     allchar = [...allchar,...spchar];
+    password += getRandomPw(spchar)
   }
   if (!lowerConfirm && !upperConfirm && !numberConfirm && !specialConfirm) {
     window.alert ("Then think of one yourself!")
     return
   }
-let password = ""
-const runlength = allchar.length
+
     for (let i = 0; i< tlength; i++) {
-    password += allchar[Math.floor(Math.random() * runlength)];
+    password += allchar[Math.floor(Math.random() * allchar.length)];
     let passwordText = document.querySelector("#password");
     passwordText.value = password;}
 }
@@ -42,8 +53,6 @@ const runlength = allchar.length
 generateBtn.addEventListener("click", writePassword);
 
 /*Tutor Questions
-The starter code has var password = generatePassword();---- What does that mean?
 How to add a MIT license after the fact
-can we review the part where the pw is generated?  this is very confusing to me
 
 */
