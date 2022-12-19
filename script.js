@@ -19,8 +19,7 @@ function getRandomPw (arr) {
 }
 function writePassword() {
 do
-{tlength = window.prompt ("How many characters should be in your Password(Min-8 Max-128, must be a numeric value)")
-console.log(tlength);}
+{tlength = window.prompt ("How many characters should be in your Password(Min-8 Max-128, must be a numeric value)")}
 while (tlength < 8 || tlength > 128 || isNaN(tlength));
 
   if (lowerConfirm = window.confirm("would you like lowercase characters")){
