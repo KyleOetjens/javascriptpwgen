@@ -1,6 +1,5 @@
-// Assignment Code
+//GLOBAL Variables
 let generateBtn = document.querySelector("#generate");
-// Write password to the #password input
 let arr
 let password = ""
 let tlength
@@ -14,6 +13,8 @@ let highchar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 let spchar = [`!`,`@`,`#`,`$`,`%`,`^`,`&`,`*`];
 let numchar= [0,1,2,3,4,5,6,7,8,9,]
 
+
+//FUNCTIONS TO TAKE IN UNSER INPUT AND GENERATE PASSWORD
 function getRandomPw (arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -48,8 +49,5 @@ while (tlength < 8 || tlength > 128 || isNaN(tlength));
     let passwordText = document.querySelector("#password");
     passwordText.value = password;}
 }
-// Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
-/*Tutor Questions
-How to add a MIT license after the fact
-*/

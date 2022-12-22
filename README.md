@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my first attempt writing ECMA script.  I am using thie generator to practice and enhance my skills
+This is my first attempt writing ECMA script.  I am using thie generator to practice and enhance my skills using functions and if statemens
 
 
 
@@ -18,10 +18,6 @@ This is my first attempt writing ECMA script.  I am using thie generator to prac
 programiz.com
 w3schools
 mdn web docs
-
-## License
-
-
 
 ## Features
 
